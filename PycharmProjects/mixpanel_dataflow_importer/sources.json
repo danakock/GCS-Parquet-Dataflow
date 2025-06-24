@@ -1,0 +1,106 @@
+[
+  {
+    "config_id": "hof_event_game_spin",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_game_spin/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_event_game_spin_poc",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_game_spin_poc/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_event_game_spin_v2",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_game_spin_v2/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_event_hof_piggy_2_poc",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_hof_piggy_2_poc/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_event_purchase",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_purchase/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_event_purchase_poc",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/event_purchase_poc/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_session_v2",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/session_v2/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  },
+  {
+    "config_id": "hof_session_v2_poc",
+    "source_gcs_prefix": "gs://playtika-mixpanel-dev/house_of_fun/session_v2_poc/",
+    "file_type": "PARQUET",
+    "mixpanel_event_name_from_field": "event_name",
+    "field_mappings": [
+      { "source_field": "bussiness_ts", "mixpanel_field": "time", "type": "unix_timestamp_auto" },
+      { "source_field": "user_id", "mixpanel_field": "$user_id", "type": "string" },
+      { "source_field": "did", "mixpanel_field": "$device_id", "type": "string" },
+      { "source_field": "insert_id", "mixpanel_field": "$insert_id", "type": "string_or_uuid" },
+      { "source_field": "*", "mixpanel_field": "*" }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "image": "us-central1-docker.pkg.dev/mixpanel-sa/dataflow-flex-templates/mixpanel-gcs-importer:0.2.9",
+  "sdk_info": {
+    "language": "PYTHON"
+  },
+  "metadata": {
+    "name": "Mixpanel GCS Importer (Direct Secret - v0.2.9 Filter Debug)",
+    "description": "A Dataflow Flex Template to ingest files from GCS, transform them based on dynamic configurations, and send events to Mixpanel. Uses direct API secret value. Includes enhanced filter debugging.",
+    "parameters": [
+      {
+        "name": "input_subscription",
+        "label": "Input Pub/Sub Subscription for GCS Notifications",
+        "helpText": "Full path to the Pub/Sub subscription for GCS file notifications (e.g., projects/PROJECT_ID/subscriptions/SUBSCRIPTION_ID).",
+        "isOptional": false,
+        "regexes": ["^projects/[^/]+/subscriptions/[^/]+$"]
+      },
+      {
+        "name": "source_configs_gcs_uri",
+        "label": "Source Configurations GCS URI",
+        "helpText": "GCS path to the JSON file defining source processing rules and schema mappings (e.g., gs://bucket/configs/sources.json).",
+        "isOptional": false,
+        "regexes": ["^gs://[^/]+/.+$"]
+      },
+      {
+        "name": "mixpanel_project_token",
+        "label": "Mixpanel Project Token",
+        "helpText": "The Mixpanel project token that will be included in event properties.",
+        "isOptional": false
+      },
+      {
+        "name": "mixpanel_api_secret",
+        "label": "Mixpanel API Secret Value",
+        "helpText": "The actual Mixpanel API Secret value for authentication. Ensure this is handled securely if logged or stored.",
+        "isOptional": false
+      },
+      {
+        "name": "dlq_topic_transform_errors",
+        "label": "DLQ Topic for Transformation Errors (Optional)",
+        "helpText": "Optional. Full Pub/Sub topic path for events that fail transformation (e.g., projects/PROJECT_ID/topics/TOPIC_ID).",
+        "isOptional": true,
+        "regexes": ["^projects/[^/]+/topics/[^/]+$"]
+      },
+      {
+        "name": "dlq_topic_api_errors",
+        "label": "DLQ Topic for Mixpanel API Errors (Optional)",
+        "helpText": "Optional. Full Pub/Sub topic path for batches that fail to post to Mixpanel API (e.g., projects/PROJECT_ID/topics/TOPIC_ID).",
+        "isOptional": true,
+        "regexes": ["^projects/[^/]+/topics/[^/]+$"]
+      },
+      {
+        "name": "debug_config_id",
+        "label": "Debug Config ID (Optional)",
+        "helpText": "Optional. If specified with a valid config_id from your sources.json, enables detailed filter debug logging for that specific source configuration. Leave blank or omit to disable.",
+        "isOptional": true
+      }
+    ]
+  }
+}
